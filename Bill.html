@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Bill</title>
+<head>
+<script>
+function bill()
+{
+var cookiearr=new Array();
+cookiearr=document.cookie.split(‘:’);
+document.writeIn(<center><h1>Welcome to Billing</h1></center>);
+document.write(“<center><table border=3><tr> <th> Description <th> Price <th> Quantity <th> Total”);
+var total2=0;
+var total3=0;
+for(var i=1; i<cookiearr.length;i++)
+{
+var cookiedata=cookiearr[i].split(‘,’);
+document.writeIn(“<tr><td>”+ cookiedata[0] +”<td>” + cookiedata[1]+”<td>” + cookiedata[2]+
+“<td>” +cookiedata[3]);
+total2=total2+parseFloat(cookiedata[2]);
+total3=total3+parseFloat(cookiedata[3]);
+}
+document.write(“<tr><td>Total<td><td>” +total2 + “<td>” + total3);
+document.write(“</table>< / center>”);
+}
+console.log()
+</script>
+</head>
+<body onload="bill()">
+<form method="post" action="bill.html" name=”bill” >
+<table style="text-align: left; width: 100px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>	<td colspan=”1” rowspan=”1” style=”vertical-align: top;”><img style=”width: 1149px; height: 200px;” alt=”top” src=file:///D:/Kompozer%20website/Images/Others/top%20copying.jpg> <br>	  </td>
+       </tr>
+    </tbody>
+  </table>
+</form>
+</body></html>
