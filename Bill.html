@@ -5,30 +5,30 @@
 function bill()
 {
 var cookiearr=new Array();
-cookiearr=document.cookie.split(‘:’);
+cookiearr=document.cookie.split(â€˜:â€™);
 document.writeIn(<center><h1>Welcome to Billing</h1></center>);
-document.write(“<center><table border=3><tr> <th> Description <th> Price <th> Quantity <th> Total”);
+document.write(â€œ<center><table border=3><tr> <th> Description <th> Price <th> Quantity <th> Totalâ€);
 var total2=0;
 var total3=0;
 for(var i=1; i<cookiearr.length;i++)
 {
-var cookiedata=cookiearr[i].split(‘,’);
-document.writeIn(“<tr><td>”+ cookiedata[0] +”<td>” + cookiedata[1]+”<td>” + cookiedata[2]+
-“<td>” +cookiedata[3]);
+var cookiedata=cookiearr[i].split(â€˜,â€™);
+document.writeIn(â€œ<tr><td>â€+ cookiedata[0] +â€<td>â€ + cookiedata[1]+â€<td>â€ + cookiedata[2]+
+â€œ<td>â€ +cookiedata[3]);
 total2=total2+parseFloat(cookiedata[2]);
 total3=total3+parseFloat(cookiedata[3]);
 }
-document.write(“<tr><td>Total<td><td>” +total2 + “<td>” + total3);
-document.write(“</table>< / center>”);
+document.write(â€œ<tr><td>Total<td><td>â€ +total2 + â€œ<td>â€ + total3);
+document.write(â€œ</table>< / center>â€);
 }
 console.log()
 </script>
 </head>
 <body onload="bill()">
-<form method="post" action="bill.html" name=”bill” >
+<form method="post" action="bill.html" name=â€billâ€ >
 <table style="text-align: left; width: 100px;" border="1" cellpadding="2" cellspacing="2">
 <tbody>
-<tr>	<td colspan=”1” rowspan=”1” style=”vertical-align: top;”><img style=”width: 1149px; height: 200px;” alt=”top” src=file:///D:/Kompozer%20website/Images/Others/top%20copying.jpg> <br>	  </td>
+<tr>	<td colspan=â€1â€ rowspan=â€1â€ style=â€vertical-align: top;â€><img style=â€width: 1149px; height: 200px;â€ alt=â€topâ€ src="top%20copying.jpg"> <br>	  </td>
        </tr>
     </tbody>
   </table>
